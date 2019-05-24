@@ -1,0 +1,64 @@
+#app{
+    position: relative;
+}
+.tel-float{
+    padding: .133333rem .066667rem;
+    background: rgba(251, 67, 15, 0.9);
+    position: fixed;
+    left: 0;
+    top:50%;
+}
+.tel-float a{
+    color:white;
+}
+.tel-float a p{
+    height: .466667rem;
+    line-height: .466667rem;
+    padding: .133333rem 0;
+    font-size: .426667rem;
+}
+
+/** --悬浮-- **/
+.sign-float{
+    width: 2.16rem;
+    height: 2.16rem;
+    line-height: 2.16rem;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top:30%;
+    background: rgba(231, 2, 2, 0.8);
+    color:white;
+    font-size: .426667rem;
+    border-radius: 50%;
+    animation: signUp 2.2s ease-in-out infinite alternate;
+}
+@keyframes signUp{
+    from{
+        transform: translate(0,0);
+    }to{
+        transform: translate(0,-6px);
+    }
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+.text p:first-child {
+    height: .266667rem;
+    line-height: .266667rem;
+    margin-top: 20px;
+    display: table;
+}
+.text p:last-child{
+    margin: 15px 0;
+}

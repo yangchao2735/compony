@@ -1,0 +1,341 @@
+* {
+  font-size: 32px;
+}
+#app {
+  position: relative;
+}
+#app .text {
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+#app .text .top-img {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 120.6%;
+}
+#app .text .top-img img {
+  width: 100%;
+}
+#app .text .warns-num {
+  width: 80%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  text-align: center;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+  border: 1px solid #808080;
+  margin: 0.3rem auto;
+  font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+#app .text .warns-num .el-icon-warning {
+  display: inline-block;
+  font-size: 0.426667rem;
+  color: #d0021b;
+}
+#app .text .warns-num .text {
+  display: inline-block;
+  font-size: 0.32rem;
+  margin-left: 10px;
+  margin-top: -0.026667rem;
+}
+#app .text .warns-num .text .buy-num {
+  color: #d0021b;
+  font-weight: bold;
+}
+#app .text .button-sign {
+  text-align: center;
+}
+#app .text .button-sign p {
+  width: 40%;
+  height: 0.426667rem;
+  line-height: 0.426667rem;
+  margin: 30px auto;
+  padding: 0.2rem;
+  background: #d0021b;
+  color: #fff;
+  font-size: 0.426667rem;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+#app .text .block {
+  width: 10rem;
+  height: 1.37rem;
+  text-align: center;
+}
+#app .text .block .block-phones {
+  width: 80%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin: 0.266667rem auto;
+  border: 1px solid #000;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+}
+#app .text .block .block-phones span {
+  display: inline-block;
+}
+#app .text .block .block-phones span:nth-of-type(2) {
+  margin: 0 0.666667rem;
+  font-weight: 600;
+}
+#app .text .introduce {
+  width: 88%;
+  padding: 20px;
+  margin: 0.4rem auto;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #fc6013;
+}
+#app .text .introduce::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #808080;
+  content: '';
+}
+#app .text .introduce .intro-group {
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+#app .text .introduce .intro-group li {
+  width: 90%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-weight: 500;
+  background: #fff;
+  color: #000;
+}
+#app .text .introduce .intro-group li:first-child {
+  position: relative;
+  font-weight: 600;
+}
+#app .text .introduce .intro-group li:first-child::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #fc6013;
+  content: '';
+}
+#app .text .introduce .intro-group li:nth-of-type(4) {
+  display: table;
+  line-height: 0.426667rem;
+}
+#app .text .introduce .intro-group li:nth-of-type(4) .cells {
+  display: table-cell;
+  vertical-align: middle;
+}
+#app .text .introduce .intro-group li .serial {
+  margin: 0 10px;
+}
+#app .text .lesson-description {
+  width: 88%;
+  margin: 0.4rem auto;
+}
+#app .text .lesson-description h1 {
+  font-weight: 600;
+  font-size: 0.426667rem;
+  text-align: center;
+}
+#app .text .lesson-description .lists-group {
+  width: 100%;
+  padding: 20px 0;
+}
+#app .text .lesson-description .lists-group .list {
+  display: table;
+  margin-top: 20px;
+}
+#app .text .lesson-description .lists-group .list .list-item {
+  display: table-cell;
+}
+#app .text .lesson-description .lists-group .list .list-item .lesson-des {
+  position: relative;
+}
+#app .text .lesson-description .lists-group .list .list-item .lesson-des::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #000;
+  content: '';
+}
+#app .text .lesson-description .lists-group .list .list-item .serial-color {
+  display: inline-block;
+  padding: 5px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #fc6013;
+  color: #fff;
+  margin: 0 10px;
+}
+#app .text .fudao {
+  width: 100%;
+  text-align: center;
+}
+#app .text .fudao h1 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 30px;
+  font-size: 0.426667rem;
+}
+#app .text .fudao img {
+  margin-top: 30px;
+  width: 100%;
+}
+#app .text .history {
+  width: 100%;
+  font-size: 0;
+}
+#app .text .history h1 {
+  font-weight: 600;
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 0.426667rem;
+  text-align: center;
+  color: #fff;
+  background: #fc420f;
+}
+#app .text .history img {
+  width: 48%;
+  display: inline-block;
+  margin-top: 20px;
+}
+#app .text .history img:nth-of-type(2n-1) {
+  margin-right: 2%;
+}
+#app .text .yuyue {
+  width: 100%;
+  padding: 0.266667rem;
+  text-align: center;
+}
+#app .text .yuyue p {
+  font-size: 0.426667rem;
+  font-weight: 600;
+  color: #ea3c10;
+  margin-top: 0.133333rem;
+}
+#app footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.426667rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+#app footer p {
+  line-height: 1.5;
+}
+#app .tel-float {
+  padding: 0.133333rem 0.066667rem;
+  background: rgba(251,67,15,0.9);
+  position: fixed;
+  left: 0;
+  top: 50%;
+}
+#app .tel-float a {
+  color: #fff;
+}
+#app .tel-float a p {
+  height: 0.466667rem;
+  line-height: 0.466667rem;
+  padding: 0.133333rem 0;
+  font-size: 0.426667rem;
+}
+#app .sign-float {
+  width: 2.16rem;
+  height: 2.16rem;
+  line-height: 2.16rem;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  top: 30%;
+  background: rgba(231,2,2,0.8);
+  color: #fff;
+  font-size: 0.426667rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  animation: signUp 2.2s ease-in-out infinite alternate;
+}
+@-moz-keyframes signUp {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -6px);
+  }
+}
+@-webkit-keyframes signUp {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -6px);
+  }
+}
+@-o-keyframes signUp {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -6px);
+  }
+}
+@keyframes signUp {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -6px);
+  }
+}

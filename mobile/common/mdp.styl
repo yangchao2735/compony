@@ -1,0 +1,205 @@
+@import '../../css/public_styl/public.styl'
+*{
+    font-size: 32px;
+}
+#app
+    position relative;
+    .text
+        border(solid, #fff);
+        overflow hidden;
+        .top-img
+            noshake(120.6%);
+            img
+                width: 100%;
+        .warns-num
+            width: 80%;
+            height .88rem;
+            line-height: .88rem;
+            text-align: center;
+            border-radius(45px);
+            border(solid, gray);
+            margin: .3rem auto;
+            font-size: 0;
+            display-flex();
+            flex-direction(row);
+            align-items();
+            justify-content(center);
+            .el-icon-warning
+                display inline-block;
+                font-size: $fontsize;
+                color: $primarycolor;
+            .text
+                display inline-block;
+                font-size: .32rem;
+                margin-left: 10px;
+                margin-top: -0.026667rem;
+                .buy-num
+                    color: $primarycolor;
+                    font-weight: bold;
+        .button-sign
+            text-align: center;
+            p
+                width: 40%;
+                height .426667rem;
+                line-height: .426667rem;
+                margin: 30px auto;
+                padding: .2rem;
+                background: $primarycolor;
+                color:white;
+                font-size: $fontsize;
+                border-radius(30px);
+        .block
+            width: 10rem;
+            height 1.37rem;
+            text-align: center;
+            .block-phones
+                width: 80%;
+                height .8rem;
+                line-height: 0.8rem;
+                margin: .266667rem auto;
+                border(solid, black);
+                border-radius(45px);
+                span
+                    display: inline-block;
+                    &:nth-of-type(2)
+                        margin: 0 .666667rem;
+                        font-weight: 600;
+
+        .introduce
+            width: 88%;
+            padding: 20px;
+            margin: .4rem auto;
+            // display-flex();
+            flex-direction(row);
+            justify-content(center);
+            align-items();
+            border-1px(gray);
+            border-radius(5px)
+            background: rgb(252, 96, 19);
+            .intro-group
+                width: 100%;
+                border-radius(5px);
+                color: white;
+                li
+                    width: 90%;
+                    height: .8rem;
+                    line-height: 0.8rem;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    background: white;
+                    color:black;
+                    &:first-child
+                        border-1px(rgb(252, 96, 19));
+                        font-weight: 600;
+                    &:nth-of-type(4)
+                        display: table;
+                        line-height: .426667rem;
+                        .cells
+                            display: table-cell;
+                            vertical-align: middle;
+                    .serial
+                        margin: 0 10px;
+        .lesson-description
+            width: 88%;
+            margin: .4rem auto;
+            h1
+                font-weight: 600;
+                font-size: $fontsize;
+                text-align center;
+            .lists-group
+                width: 100%;
+                padding: 20px 0;
+                .list
+                    display: table;
+                    margin-top: 20px;
+                    .list-item
+                        display: table-cell;
+                        .lesson-des
+                            border-1px(black);
+                        .serial-color
+                            display: inline-block;
+                            padding: 5px;
+                            border-radius(50%);
+                            background: rgb(252, 96, 19);
+                            color: white;
+                            margin: 0 10px;
+        .fudao
+            width: 100%;
+            text-align: center;
+            h1
+                font-weight: 600;
+                font-size: 24px;
+                margin-top: 30px;
+                font-size: $fontsize;
+            img
+                margin-top: 30px;
+                width: 100%;
+        .history
+            width 100%;
+            font-size: 0;
+            h1
+                font-weight: 600;
+                margin-top: 20px;
+                line-height 1.8;
+                font-size: $fontsize;
+                text-align: center;
+                color: white;
+                background: rgb(252, 66, 15);
+            img
+                width: 48%;
+                display: inline-block;
+                margin-top: 20px;
+                &:nth-of-type(2n-1)
+                    margin-right: 2%;
+        .yuyue
+            width: 100%;
+            padding: .266667rem;
+            text-align: center;
+            p
+                font-size: $fontsize;
+                font-weight: 600;
+                color: rgb(234,60,16);
+                margin-top: .133333rem;
+    footer
+        width: 100%;
+        text-align: center;
+        font-size: $fontsize;
+        font-weight: 600;
+        margin-top: .2rem;
+        p
+            line-height: 1.5;
+    .tel-float
+        padding: .133333rem .066667rem;
+        background: rgba(251, 67, 15, 0.9);
+        position: fixed;
+        left: 0;
+        top:50%;
+        a
+            color:white;
+            p
+                height: .466667rem;
+                line-height: .466667rem;
+                padding: .133333rem 0;
+                font-size: .426667rem;
+    .sign-float
+        width: 2.16rem;
+        height: 2.16rem;
+        line-height: 2.16rem;
+        text-align: center;
+        position: fixed;
+        right: 0;
+        top:30%;
+        background: rgba(231, 2, 2, 0.8);
+        color:white;
+        font-size: .426667rem;
+        border-radius: 50%;
+        animation: signUp 2.2s ease-in-out infinite alternate;
+
+    @keyframes signUp{
+        from{
+            transform: translate(0,0);
+        }to{
+            transform: translate(0,-6px);
+        }
+    }

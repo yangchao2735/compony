@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots” content="nofollow” />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MDRT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/mdrt.css">
+    <script src="./js/flexible.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script>
+    <script type="text/javascript" src="/vue.php"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="text" @click="goHome">
+            <img src="./imgs/mobile01.jpg" alt="">
+            <p>©2018 叁赢教育科技（深圳）有限公司 版权所有</p>
+            <p>粤ICP备18109831号</p>
+        </div>
+        <div class="tel-float">
+            <a href="tel:0755-82688861">
+                <p>咨询热线：</p>
+                <p>0755-82688861</p>
+            </a>
+        </div>
+        <div class="sign-float" @click='sign()'>
+            <p>在线报名</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        methods: {
+            goHome() {
+                let r = confirm('即将前往叁赢教育科技官网 >>>');
+                if (r == true) {
+                    window.location.href = 'http://3wtriwin.com.cn/';
+                } else {
+                    return;
+                }
+            },
+            sign(){
+                window.location.href = 'https://www.wjx.top/jq/38709354.aspx';
+            }
+        }
+    })
+</script>

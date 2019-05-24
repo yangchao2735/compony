@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MDRT保险增员</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../css/resetpc.css">
+    <link rel="stylesheet" href="../css/mdrt.css">
+    <script src="../js/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- ie-360-2345 -->
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <el-container class="el-containers">
+            <el-header>
+                <div class="header-top">
+                    <img src="../images/logo.png" alt="" width="51" height="51">
+                    <h1 class="title-cn">叁赢教育科技</h1>
+                    <span class="title-en">TriWin Education Technology</span>
+                    <b class="tel">0755-82688861</b>
+                </div>
+                <div class="navs">
+                    <el-menu mode="horizontal">
+                        <el-menu-item class="active-text-color"><a href="http://3wtriwin.com.cn/">首页</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">增员学院</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">蜕变学院</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">营销学院</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">叁赢咨询</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">关于我们</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">商务合作</a></el-menu-item>
+                    </el-menu>
+                </div>
+            </el-header>
+            <el-main>
+                <div class="scene" v-loading="imgloading">
+                    <img src="../images/recruiting/banner.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h1>众里寻她千百度，蓦然回首，您想要的热门特训在此处!</h1>
+                </div>
+                <div class="content">
+                    <div class="cont-imgs">
+                        <img src="./imgs/issue.png" width="450" alt="">
+                        <img src="./imgs/promise.png" width="450" alt="">
+                    </div>
+                    <div class="cont-iframe">
+                        <div @click="getbuttom" class="button">立即预约报名！</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="./imgs/outline.png" alt="">
+                    <img src="./imgs/lessonway.png" alt="">
+                    <img src="./imgs/lessonstyle.png" alt="">
+                </div>
+                <div class="introduce">
+                    <div class="intros">
+                        <div class="teacher">
+                            <h1>-- 导师介绍 --</h1>
+                            <img src="./imgs/teacher.png" alt="">
+                        </div>
+                        <div class="carsousel">
+                            <h1>-- 往期精彩课堂 --</h1>
+                            <el-carousel :interval="interval" type="card" height="220px">
+                                <el-carousel-item v-for="(item,idx) in carouselImgs" :key="item.label">
+                                    <img :src="'../images/recruiting/'+item.srcUrl" width="270" height="220" alt="">
+                                </el-carousel-item>
+                            </el-carousel>
+                        </div>
+                    </div>
+                </div>
+            </el-main>
+            <el-footer>
+                <p>©2018 叁赢教育科技（深圳）有限公司 版权所有</p>
+                <p>粤ICP备18109831号</p>
+            </el-footer>
+        </el-container>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                msg: ["wx01", "wx02", "wx03", "wx04", "wx05"],
+                introduce: [{
+                        id: 01,
+                        des: '2006年，为香港应该保诚独家研发'
+                    },
+                    {
+                        id: 02,
+                        des: '2008年市场解封'
+                    },
+                    {
+                        id: 03,
+                        des: '2011年引进国内，已有10余家优秀保险公司采购此课程'
+                    },
+                    {
+                        id: 04,
+                        des: '平安团队长最热捧的外购增员类课程'
+                    },
+                    {
+                        id: 05,
+                        des: '全国开课：全国40多个省市开课'
+                    },
+                    {
+                        id: 06,
+                        des: '合作公司：10余家顶尖寿险公司合作'
+                    },
+                    {
+                        id: 07,
+                        des: '开办期数：8年时间开班186期，毕业人数超过17000人，已有6000余部经理、总监在增员大师训练营中毕业'
+                    }
+                ],
+                carouselImgs: [{
+                        label: 01,
+                        srcUrl: 'banner01.png'
+                    },
+                    {
+                        label: 02,
+                        srcUrl: 'banner02.png'
+                    },
+                    {
+                        label: 03,
+                        srcUrl: 'banner03.png'
+                    }, {
+                        label: 04,
+                        srcUrl: 'banner04.png'
+                    }
+                ],
+                interval: 4500,
+                imgloading: false
+            }
+        },
+        created() {
+            this.$nextTick(() => {
+                this.openImgScreen();
+            })
+        },
+        methods: {
+            getbuttom() {
+                window.location.href = 'https://www.wjx.top/jq/38595288.aspx';
+            },
+            openImgScreen: function () {
+                this.imgloading = true;
+                const loading = this.$loading({
+                    lock: true,
+                    text: 'Loading...',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                setTimeout(() => {
+                    loading.close();
+                    this.imgloading = false;
+                }, 2000);
+            }
+        }
+    })
+
+</script>

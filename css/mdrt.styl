@@ -1,0 +1,323 @@
+@import './public_styl/public.styl';
+/* *  1280px+  * */
+@media screen and (min-width: 1200px)
+    *
+        padding: 0;
+        margin: 0;
+    body
+        font-family: Microsoft YaHei;
+        background: rgb(255, 255, 255);
+        .el-container
+            width: 100%;
+            .el-header
+                width: 100%;
+                height: 140px;
+                .header-top
+                    width: 1100px;
+                    height: 140px;
+                    margin: 0 auto;
+                    display-flex();
+                    flex-direction(row);
+                    align-items();
+                    justify-content(flex-start);
+                    position: relative;
+                    img
+                        vertical-align: middle;
+                        margin-right: 20px;
+                    .title-cn
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                        font-size: 32px;
+                        color: #4b4b4b;
+                    .title-en
+                        vertical-align: middle;
+                        font-size: 16px;
+                        color: #ccc;
+                    .tel
+                        font-size: 26px;
+                        color: rgb(216, 27, 67);
+                        font-weight: bold;
+                        position: absolute;
+                        top: 30px;
+                        right: 10px;
+                .navs
+                    width: 100%;
+                    height: 60px;
+                    border: 1px solid red;
+                    background: rgb(43, 43, 43);
+                    .el-menu
+                        width: 1100px;
+                        margin: 0 auto;
+                        background-color: rgb(43, 43, 43);
+                        .el-menu-item
+                            width: 120px;
+                            padding: 0 20px;
+                            display-flex();
+                            flex-direction(row);
+                            align-items();
+                            justify-content(center);
+                            &:not(.is-disabled):focus,&:not(.is-disabled):hover
+                                background: none;
+                            a
+                                display: block;
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: 500;
+                                text-align: center;
+                                color: white;
+                                &:hover
+                                    width: 100%;
+                                    background: rgb(196, 0, 0);
+                    .el-menu.el-menu--horizontal
+                        border-bottom: none;
+            .el-main
+                overflow: unset;
+                margin-top: 120px;
+                .scene
+                    noshake(23.44%);
+                    img
+                        width 100%;
+                .description
+                    width: 1200px;
+                    height: 72px;
+                    line-height: 72px;
+                    color: #c40000;
+                    margin: 0 auto;
+                    border-bottom: 1px solid rgb(234, 234, 234)
+                    // border-1px(rgb(234, 234, 234));
+                    h1
+                        height: 72px;
+                        width: 780px;
+                        margin: 0;
+                        border-1px(#c40000);
+                .content
+                    width: 1200px;
+                    height 380px;
+                    border-1px(red);
+                    margin: 20px auto;
+                    display-flex();
+                    .cont-imgs
+                        width: 920px;
+                        img
+                            width: 450px;
+                    .cont-iframe
+                        flex1();
+                        position relative;
+                        .button
+                            width: 180px;
+                            height: 180px;
+                            line-height: 180px;
+                            text-align: center;
+                            background: #c40000;
+                            border-radius(50%);
+                            color: white;
+                            font-size: 24px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            cursor: pointer;
+                .feature
+                    width: 1200px;
+                    height: 580px;
+                    font-size: 0;
+                    margin: 20px auto;
+                    display-flex();
+                    flex-direction(row);
+                    // align-items();
+                    justify-content(center);
+                    img
+                        width: 400px;
+                .introduce
+                    width: 100%;
+                    height 450px;
+                    overflow hidden;
+                    .intros
+                        margin: 30px auto;
+                        width: 1200px;
+                        height: 380px;
+                        display-flex();
+                        .teacher
+                            width: 640px;
+                            h1
+                                color:white;
+                                height 52px;
+                                line-height: 52px;
+                                text-align: center;
+                                background: #c40000;
+                            img
+                                width: 100%;
+                        .carsousel
+                            flex1();
+                            h1
+                                color:white;
+                                height 52px;
+                                line-height: 52px;
+                                text-align: center;
+                                background: rgb(252, 66, 15);
+                            .el-carousel
+                                margin: 60px 0 20px 0;
+            .el-footer
+                text-align: center;
+
+@media screen and (min-width: 960px) and (max-width: 1199px)
+    *
+        margin: 0;
+        padding: 0;
+    body
+        background: rgb(255, 255, 255);
+        font-family: Microsoft YaHei;
+    .el-container
+            width: 100%;
+            .el-header
+                width: 100%;
+                height: 140px;
+                .header-top
+                    width: 960px;
+                    height: 140px;
+                    margin: 0 auto;
+                    display-flex();
+                    flex-direction(row);
+                    align-items();
+                    justify-content(flex-start);
+                    position: relative;
+                    img
+                        vertical-align: middle;
+                        margin-right: 20px;
+                    .title-cn
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                        font-size: 32px;
+                        color: #4b4b4b;
+                    .title-en
+                        vertical-align: middle;
+                        font-size: 16px;
+                        color: #ccc;
+                    .tel
+                        font-size: 26px;
+                        color: rgb(216, 27, 67);
+                        font-weight: bold;
+                        position: absolute;
+                        top: 30px;
+                        right: 10px;
+                .navs
+                    width: 100%;
+                    height: 60px;
+                    border: 1px solid red;
+                    background: rgb(43, 43, 43);
+                    .el-menu
+                        width: 960px;
+                        margin: 0 auto;
+                        background-color: rgb(43, 43, 43);
+                        .el-menu-item
+                            width: 120px;
+                            padding: 0 20px;
+                            display-flex();
+                            flex-direction(row);
+                            align-items();
+                            justify-content(center);
+                            &:not(.is-disabled):focus,&:not(.is-disabled):hover
+                                background: none;
+                            a
+                                display: block;
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: 500;
+                                text-align: center;
+                                color: white;
+                                &:hover
+                                    width: 100%;
+                                    background: rgb(196, 0, 0);
+                    .el-menu.el-menu--horizontal
+                        border-bottom: none;
+            .el-main
+                overflow: unset;
+                margin-top: 120px;
+                .scene
+                    noshake(23.44%);
+                    img
+                        width 100%;
+                .description
+                    width: 960px;
+                    height: 72px;
+                    line-height: 72px;
+                    color: #c40000;
+                    margin: 0 auto;
+                    border-bottom: 1px solid rgb(234, 234, 234)
+                    // border-1px(rgb(234, 234, 234));
+                    h1
+                        height: 72px;
+                        width: 780px;
+                        margin: 0;
+                        border-1px(#c40000);
+                .content
+                    width: 960px;
+                    height 380px;
+                    border-1px(red);
+                    margin: 20px auto;
+                    display-flex();
+                    .cont-imgs
+                        width: 820px;
+                        img
+                            width: 400px;
+                    .cont-iframe
+                        flex1();
+                        position relative;
+                        .button
+                            width: 150px;
+                            height: 150px;
+                            line-height: 150px;
+                            text-align: center;
+                            background: #c40000;
+                            border-radius(50%);
+                            color: white;
+                            font-size: 18px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            cursor: pointer;
+                .feature
+                    width: 960px;
+                    height: 380px;
+                    font-size: 0;
+                    margin: 20px auto;
+                    display-flex();
+                    flex-direction(row);
+                    justify-content(center);
+                    img
+                        width: 320px;
+                .introduce
+                    width: 100%;
+                    height 420px;
+                    overflow hidden;
+                    .intros
+                        margin: 30px auto;
+                        width: 960px;
+                        height: 320px;
+                        display-flex();
+                        .teacher
+                            width: 480px;
+                            h1
+                                color:white;
+                                height 52px;
+                                line-height: 52px;
+                                text-align: center;
+                                background: #c40000;
+                            img
+                                width: 480px;
+
+                        .carsousel
+                            flex1();
+                            h1
+                                color:white;
+                                height 52px;
+                                line-height: 52px;
+                                text-align: center;
+                                background: rgb(252, 66, 15);
+                            .el-carousel
+                                margin: 20px 0 20px 0;
+            .el-footer
+                text-align: center;

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>保险增员</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="./css/resetpc.css">
+    <link rel="stylesheet" href="./css/public_styl/index.css">
+    <script src="./js/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- ie-360-2345 -->
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <el-container class="el-containers">
+            <el-header>
+                <div class="header-top">
+                    <img src="./images/logo.png" alt="" width="51" height="51">
+                    <h1 class="title-cn">叁赢教育科技</h1>
+                    <span class="title-en">TriWin Education Technology</span>
+                    <b class="tel">0755-82688861</b>
+                </div>
+                <div class="navs">
+                    <el-menu mode="horizontal">
+                        <el-menu-item class="active-text-color"><a href="http://3wtriwin.com.cn/">首页</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">增员学院</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">蜕变学院</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">营销学院</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">叁赢咨询</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">关于我们</a></el-menu-item>
+                        <el-menu-item><a href="http://3wtriwin.com.cn/">商务合作</a></el-menu-item>
+                    </el-menu>
+                </div>
+            </el-header>
+            <el-main>
+                <div class="scene" v-loading="imgloading"></div>
+                <div class="description">
+                    <h1>众里寻她千百度，蓦然回首，您想要的热门特训在此处!</h1>
+                </div>
+                <div class="content">
+                    <div class="cont-left">
+                        <img src="./images/recruiting/bxzy_01.png" width="450" alt="">
+                    </div>
+                    <ul class="cont-right">
+                        <li>
+                            <h1>深圳增员大师特训公开班</h1>
+                        </li>
+                        <li class="times">开班时间：5月18日-19日</li>
+                        <li class="times">课程时间：两天一夜</li>
+                        <li class="preferential">
+                            <p>现在预约享五折优惠(仅限前100名)</p>
+                        </li>
+                        <li class="times"><i class="el-icon-message-solid"></i>目前已有<b
+                                style="color:#c40000;">66</b>名抢优惠名额</li>
+                    </ul>
+                    <div class="cont-iframe">
+                        <div @click="getbuttom" class="button">立抢优惠名额！</div>
+                    </div>
+                </div>
+                <div class="introduce">
+                    <div class="introduce-left">
+                        <ul class="intro-group">
+                            <li>如何调动组员的增员意愿?</li>
+                            <li class="intro-item"><b class="serial">>>01</b>让增员更精准，更高级，更有尊严！</li>
+                            <li class="intro-item"><b class="serial">>>02</b>让你的团队人人都是“增员大师”！</li>
+                            <li>
+                                <div class="cells">
+                                    <b class="serial">>>03</b>有哪些更好的增员渠道面对优质准增员如何打动他的心？！
+                                </div>
+                            </li>
+                            <li class="intro-item"><b class="serial">>>04</b>如何大幅提高增员留存率？！</li>
+                        </ul>
+                    </div>
+                    <div class="introduce-middle">
+                        <h1 class="lesson-title">课程概括</h1>
+                        <ul class="lists-group">
+                            <li class="list" :key="index" v-for="(item,index) in introduce">
+                                <div class="list-item">
+                                    <strong class="serial-color">{{item.id}}</strong>
+                                    <span class="lesson-des">{{item.des}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lesson-fudao">
+                    <div class="fudao-left">
+                        <h1>课后教练辅导落地及课后工具跟进情况</h1>
+                        <img src="./images/recruiting/fudao.png" alt="">
+                    </div>
+                    <div class="fudao-right">
+                        <h1>-- 往期精彩课堂 --</h1>
+                        <el-carousel :interval="interval" type="card" height="200px">
+                            <el-carousel-item v-for="(item,idx) in carouselImgs" :key="item.label">
+                                <img :src="'./images/recruiting/'+item.srcUrl" width="316" height="200" alt="">
+                            </el-carousel-item>
+                        </el-carousel>
+                    </div>
+                </div>
+            </el-main>
+            <el-footer>
+                <p>©2018 叁赢教育科技（深圳）有限公司 版权所有</p>
+                <p>粤ICP备18109831号</p>
+            </el-footer>
+        </el-container>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                msg: ["wx01", "wx02", "wx03", "wx04", "wx05","wx06", "wx07"],
+                introduce: [
+                    {
+                        id: 01,
+                        des: '2006年，为香港应该保诚独家研发'
+                    },
+                    {
+                        id: 02,
+                        des: '2008年市场解封'
+                    },
+                    {
+                        id: 03,
+                        des: '2011年引进国内，已有10余家优秀保险公司采购此课程'
+                    },
+                    {
+                        id: 04,
+                        des: '平安团队长最热捧的外购增员类课程'
+                    },
+                    {
+                        id: 05,
+                        des: '全国开课：全国40多个省市开课'
+                    },
+                    {
+                        id: 06,
+                        des: '合作公司：10余家顶尖寿险公司合作'
+                    },
+                    {
+                        id: 07,
+                        des: '开办期数：8年时间开班186期，毕业人数超过17000人，已有6000余部经理、总监在增员大师训练营中毕业'
+                    }
+                ],
+                carouselImgs: [
+                    {
+                        label: 01,
+                        srcUrl: 'banner01.png'
+                    },
+                    {
+                        label: 02,
+                        srcUrl: 'banner02.png'
+                    },
+                    {
+                        label: 03,
+                        srcUrl: 'banner03.png'
+                    }, {
+                        label: 04,
+                        srcUrl: 'banner04.png'
+                    }
+                ],
+                interval: 3000,
+                imgloading: false
+            }
+        },
+        created() {
+            this.$nextTick(() => {
+                this.openImgScreen();
+            })
+        },
+        mounted() {
+            this.$nextTick(() => {
+                this.changeWX();
+            })
+        },
+        methods: {
+            changeWX() {
+
+                let magkey = Math.floor(Math.random() * 5) + 1;//随机数
+                magkey = magkey - 1;
+
+                let msgtp = this.msg[magkey];
+
+                str = msgtp.substr(3, 1);
+
+                console.log(str);
+
+                let wx = `<img src="./images/test/${msgtp}.png" width="300" height="300" style="position:fixed;bottom:0;left:10px;" alt="${msgtp}">
+                        <p style="width:300px;position:fixed;bottom:305px;left:10px;color:red;">温馨提醒：此群为第<strong style="color:black;">${str}</strong>群，超过100人请刷新页面添加到其他群，或拨打咨询电话<a style="color:black;" href="tel:0755-82688861">0755-82688861</a>进群，若造成不便，请谅解！</P>
+                `
+                document.write(wx);
+            },
+            getbuttom() {
+                window.location.href = 'https://www.wjx.top/jq/38595288.aspx';
+            },
+            openImgScreen:function() {
+                this.imgloading = true;
+                const loading = this.$loading({
+                    lock: true,
+                    text: 'Loading...',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                setTimeout(() => {
+                    loading.close();
+                    this.imgloading = false;
+                }, 2000);
+            }
+        }
+    })
+</script>

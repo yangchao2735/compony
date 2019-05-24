@@ -1,0 +1,263 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots” content=" nofollow” />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MDP</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/mdp.css">
+    <script src="./js/flexible.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script>
+    <!-- <script type="text/javascript" src="/vue.php"></script> -->
+</head>
+
+<body>
+    <div id="app">
+        <div class="text">
+            <div class="top-img" @click="goHome">
+                <img src="./imgs/top.jpg" alt="">
+            </div>
+            <div class="warns-num">
+                <i class="el-icon-warning"></i>
+                <span class="text">目前已经有<b class="buy-num">66</b>人抢优惠名额</span>
+            </div>
+            <div class="button-sign">
+                <p @click="sign()">前往立抢优惠名额</p>
+            </div>
+            <div class="block">
+                <div class="block-phones">
+                    <mt-swipe :show-indicators="false" :auto="5000">
+                        <mt-swipe-item v-for="item in phones" :key="item.label">
+                            <span>{{item.name}}</span>
+                            <span>{{ item.num }}</span>
+                            <span>{{item.daybefore}}</span>
+                        </mt-swipe-item>
+                    </mt-swipe>
+                </div>
+            </div>
+            <div class="introduce">
+                <ul class="intro-group">
+                    <li>如何调动组员的增员意愿?</li>
+                    <li class="intro-item"><b class="serial">>>01</b>让增员更精准，更高级，更有尊严！</li>
+                    <li class="intro-item"><b class="serial">>>02</b>让你的团队人人都是“增员大师”！</li>
+                    <li>
+                        <div class="cells">
+                            <b class="serial">>>03</b>有哪些更好的增员渠道面对优质准增员如何打动他的心？！
+                        </div>
+                    </li>
+                    <li class="intro-item"><b class="serial">>>04</b>如何大幅提高增员留存率？！</li>
+                </ul>
+            </div>
+            <div class="lesson-description">
+                <h1 class="lesson-title">课程概括</h1>
+                <ul class="lists-group">
+                    <li class="list" :key="index" v-for="(item,index) in introduce">
+                        <div class="list-item">
+                            <strong class="serial-color">{{item.id}}</strong>
+                            <span class="lesson-des">{{item.des}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fudao">
+                <h1>课后教练辅导落地及课后工具跟进情况</h1>
+                <img src="../images/recruiting/fudao.png" alt="">
+            </div>
+            <div class="history">
+                <h1>-- 往期精彩课堂 --</h1>
+                <div class="img-group">
+                    <img src="../images/recruiting/banner01.png" alt="">
+                    <img src="../images/recruiting/banner01.png" alt="">
+                    <img src="../images/recruiting/banner01.png" alt="">
+                    <img src="../images/recruiting/banner01.png" alt="">
+                </div>
+            </div>
+            <div class="yuyue">
+                <p>现在预约享五折优惠</p>
+                <p>(仅限前100名)</p>
+            </div>
+            <div class="warns-num">
+                <i class="el-icon-warning"></i>
+                <span class="text">目前已经有<b class="buy-num">66</b>人抢优惠名额</span>
+            </div>
+            <div class="button-sign">
+                <p @click="sign()">前往立抢优惠名额</p>
+            </div>
+            <div class="block">
+                <div class="block-phones">
+                    <mt-swipe :show-indicators="false" :auto="5000">
+                        <mt-swipe-item v-for="item in phones" :key="item.label">
+                            <span>{{item.name}}</span>
+                            <span>{{ item.num }}</span>
+                            <span>{{item.daybefore}}</span>
+                        </mt-swipe-item>
+                    </mt-swipe>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>©2018 叁赢教育科技（深圳）有限公司 版权所有</p>
+            <p>粤ICP备18109831号</p>
+        </footer>
+        <div class="tel-float">
+            <a href="tel:0755-82688861">
+                <p>咨询热线：</p>
+                <p>0755-82688861</p>
+            </a>
+        </div>
+        <div class="sign-float" @click='sign()'>
+            <p>在线报名</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                msg: ["hlw01", "hlw02", "hlw03", "hlw04", "hlw05", "hlw06", "hlw07"],
+                phones: [{
+                        label: 01,
+                        name: '可**',
+                        num: '131****5807',
+                        daybefore: '15天前'
+                    },
+                    {
+                        label: 02,
+                        name: '张*',
+                        num: '151****2107',
+                        daybefore: '15天前'
+                    },
+                    {
+                        label: 03,
+                        name: '蔡**',
+                        num: '189****3864',
+                        daybefore: '14天前'
+                    },
+                    {
+                        label: 04,
+                        name: '谢**',
+                        num: '135****3368',
+                        daybefore: '13天前'
+                    },
+                    {
+                        label: 05,
+                        name: '任**',
+                        num: '131****6376',
+                        daybefore: '13天前'
+                    },
+                    {
+                        label: 06,
+                        name: '劉**',
+                        num: '138****2636',
+                        daybefore: '13天前'
+                    },
+                    {
+                        label: 07,
+                        name: '聂*',
+                        num: '139****1986',
+                        daybefore: '11天前'
+                    },
+                    {
+                        label: 08,
+                        name: '杨*',
+                        num: '139****2976',
+                        daybefore: '8天前'
+                    },
+                    {
+                        label: 09,
+                        name: '杨**',
+                        num: '151****6325',
+                        daybefore: '7天前'
+                    },
+                    {
+                        label: 10,
+                        name: '陈**',
+                        num: '131****1846',
+                        daybefore: '5天前'
+                    },
+                    {
+                        label: 11,
+                        name: '马**',
+                        num: '138****1121',
+                        daybefore: '3天前'
+                    },
+                    {
+                        label: 12,
+                        name: '年**',
+                        num: '138****2636',
+                        daybefore: '1天前'
+                    }
+                ],
+                introduce: [{
+                        id: 01,
+                        des: '2006年，为香港应该保诚独家研发'
+                    },
+                    {
+                        id: 02,
+                        des: '2008年市场解封'
+                    },
+                    {
+                        id: 03,
+                        des: '2011年引进国内，已有10余家优秀保险公司采购此课程'
+                    },
+                    {
+                        id: 04,
+                        des: '平安团队长最热捧的外购增员类课程'
+                    },
+                    {
+                        id: 05,
+                        des: '全国开课：全国40多个省市开课'
+                    },
+                    {
+                        id: 06,
+                        des: '合作公司：10余家顶尖寿险公司合作'
+                    },
+                    {
+                        id: 07,
+                        des: '开办期数：8年时间开班186期，毕业人数超过17000人，已有6000余部经理、总监在增员大师训练营中毕业'
+                    }
+                ]
+            }
+        },
+        mounted() {
+            this.$nextTick(() => {
+                this.changeWX();
+            })
+        },
+        methods: {
+            changeWX() {
+                let magkey = Math.floor(Math.random() * 5) + 1; //随机数
+                magkey = magkey - 1;
+                let msgtp = this.msg[magkey];
+                str = msgtp.substr(3, 1);
+                console.log(str);
+                let wx = `<img src="./imgs/test/${msgtp}.jpg" width="300" height="300" style="position:fixed;bottom:0;left:10px;z-index:999" alt="${msgtp}">
+        <p style="width:300px;padding:20px 0;position:fixed;bottom:305px;left:10px;color:white;background:red;z-index:999;line-height:1.2;">温馨提醒：此群为第<strong style="color:black;padding:0 5px;display:inline-block;">${str}</strong>群，超过100人请刷新页面添加到其他群，或拨打咨询电话<a style="color:white;" href="tel:0755-82688861">0755-82688861</a>进群，若造成不便，请谅解！</P>
+`
+                document.write(wx);
+            },
+            goHome() {
+                let r = confirm('即将前往叁赢教育科技官网 >>>');
+                if (r == true) {
+                    window.location.href = 'http://3wtriwin.com.cn/';
+                } else {
+                    return;
+                }
+            },
+            sign() {
+                window.location.href = 'https://www.wjx.top/jq/38737727.aspx';
+            }
+        }
+    })
+
+</script>
